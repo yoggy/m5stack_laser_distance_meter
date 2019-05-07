@@ -101,7 +101,7 @@ bool readline(char *buf, size_t buf_size)
     if (c == -1) {
       delay(10);
       error_count ++;
-      if (error_count > 100) return false; // timeout...
+      if (error_count > 300) return false; // timeout...
       continue;
     }
     buf[idx] = (char)c;
